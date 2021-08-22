@@ -8,7 +8,6 @@ def read_from_hash(hash, key)
 end
 
 def update_counting_hash(hash, key)
-  hash[key] += 1 if hash[key]
-  hash[key] = 1 unless hash[key]
+  hash[key] ? hash[key] += 1 : hash[key] = 1
   hash
 end
